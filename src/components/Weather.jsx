@@ -1,4 +1,4 @@
-import React, { useEffect ,useRef,useState} from 'react'
+import  { useEffect ,useRef,useState} from 'react'
 import './Weather.css'
 import search_icon from '../assets/search.png'
 import clear_icon from '../assets/clear.png'
@@ -10,7 +10,7 @@ import wind_icon from '../assets/wind.png'
 import humidity_icon from '../assets/humidity.png'
 
 
-const API_KEY= "014b28a3a25eceed3f6ecac0bd3f2311";
+const API_KEY= import.meta.env.VITE_WEATHER_API_KEY;
 const Weather = ()=>{
     const inputRef = useRef();
     const [weatherData , setWeatherData] = useState(false);
